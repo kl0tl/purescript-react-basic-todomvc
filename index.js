@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 
 import createReactClass from 'create-react-class';
 React.createClass = createReactClass;
-var App = require('./output/Todo.App');
+var App = require('./dce-output/Todo.App');
+require('todomvc-common/base.css');
+require('todomvc-app-css/index.css');
 
 function main() {
   const myComponent = (
