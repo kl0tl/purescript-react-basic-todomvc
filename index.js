@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 
 import createReactClass from 'create-react-class';
 React.createClass = createReactClass;
-var App = require('./output/Todo.App');
+var PS = require('./bundle.js');
+var App = PS["Todo.App"].app;
+require('todomvc-common/base.css');
+require('todomvc-app-css/index.css');
 
 function main() {
-  const myComponent = (
-      <App.app/>
-  );
-
-  ReactDOM.render(myComponent, document.getElementById('app'));
+  ReactDOM.render(<App />, document.getElementById('app'));
 }
 
 // HMR stuff
