@@ -1,0 +1,1 @@
+{"moduleName":["Web","Event","Internal","Types"],"imports":[{"annotation":{"meta":null,"sourceSpan":{"start":[1,1],"end":[7,40]}},"moduleName":["Prim"]}],"builtWith":"0.13.6","modulePath":".spago/web-events/v2.0.1/src/Web/Event/Internal/Types.purs","exports":[],"decls":[],"comments":[],"foreign":[],"sourceSpan":{"start":[1,1],"end":[7,40]}}

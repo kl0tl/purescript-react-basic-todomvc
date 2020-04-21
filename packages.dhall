@@ -114,8 +114,66 @@ let mkPackage =
 let upstream =
       https://github.com/purescript/package-sets/releases/download/psc-0.13.6-20200404/packages.dhall sha256:f239f2e215d0cbd5c203307701748581938f74c4c78f4aeffa32c11c131ef7b6
 
-let overrides = {=} 
+let overrides =
+      { arrays =
+          upstream.arrays ⫽ { version = "master" }
+      , prelude =
+            upstream.prelude
+          ⫽ { repo =
+                "ssh://git@github.com/JordanMartinez/purescript-prelude.git"
+            , version =
+                "fixCompilerWarnings"
+            }
+      , react-basic =
+            upstream.react-basic
+          ⫽ { repo =
+                "ssh://git@github.com/JordanMartinez/purescript-react-basic.git"
+            , version =
+                "polykindsUpdate"
+            }
+      , record =
+            upstream.record
+          ⫽ { repo =
+                "ssh://git@github.com/JordanMartinez/purescript-record.git"
+            , version =
+                "polykindsUpdate"
+            }
+      , refs =
+          upstream.refs ⫽ { version = "master" }
+      , simple-json =
+            upstream.simple-json
+          ⫽ { repo =
+                "ssh://git@github.com/JordanMartinez/purescript-simple-json.git"
+            , version =
+                "polykindsUpdate"
+            }
+      , st =
+            upstream.st
+          ⫽ { repo =
+                "ssh://git@github.com/kl0tl/purescript-st.git"
+            , version =
+                "no-foreign-primes"
+            }
+      , strings =
+          upstream.strings ⫽ { version = "master" }
+      , typelevel-prelude =
+            upstream.typelevel-prelude
+          ⫽ { repo =
+                "ssh://git@github.com/JordanMartinez/purescript-typelevel-prelude.git"
+            , version =
+                "fixCompilerWarnings"
+            }
+      , variant =
+            upstream.variant
+          ⫽ { repo =
+                "ssh://git@github.com/JordanMartinez/purescript-variant.git"
+            , version =
+                "polykindsUpdate"
+            }
+      , web-html =
+          upstream.web-html ⫽ { version = "master" }
+      }
 
 let additions = {=}
 
-in  upstream // overrides // additions
+in  upstream ⫽ overrides ⫽ additions
