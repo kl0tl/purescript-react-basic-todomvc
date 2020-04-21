@@ -1,0 +1,1 @@
+{"moduleName":["Web","DOM","Internal","Types"],"imports":[{"annotation":{"meta":null,"sourceSpan":{"start":[1,1],"end":[7,43]}},"moduleName":["Prim"]}],"builtWith":"0.13.6","modulePath":".spago/web-dom/v4.0.1/src/Web/DOM/Internal/Types.purs","exports":[],"decls":[],"comments":[],"foreign":[],"sourceSpan":{"start":[1,1],"end":[7,43]}}

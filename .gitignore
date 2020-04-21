@@ -3,5 +3,5 @@ node_modules/*
 .parcel-cache
 .cache/*
 .spago/*
-output/*
-dist/*
+.stack-work/*
+output/cache-db.json
