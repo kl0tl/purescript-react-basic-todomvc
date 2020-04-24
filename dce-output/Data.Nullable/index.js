@@ -4,10 +4,11 @@ import * as Data_Maybe from "../Data.Maybe/index.js";
 var toMaybe = function (n) {
     return $foreign.nullable(n, Data_Maybe.Nothing.value, Data_Maybe.Just.create);
 };
+var $$null = $foreign.jsNull;
 export {
-    null,
     notNull
 } from "./foreign.js";
 export {
+    $$null as null,
     toMaybe
 };

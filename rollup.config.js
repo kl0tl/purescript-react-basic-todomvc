@@ -18,11 +18,7 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     resolve(),
-    commonjs({
-      namedExports: {
-        'dce-output/Data.Nullable/foreign.js': ['null']
-      }
-    }),
+    commonjs(),
     terser()
   ]
 };

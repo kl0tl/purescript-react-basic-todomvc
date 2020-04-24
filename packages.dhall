@@ -117,6 +117,13 @@ let upstream =
 let overrides =
       { arrays =
           upstream.arrays ⫽ { version = "master" }
+      , nullable =
+            upstream.nullable
+          ⫽ { repo =
+                "https://github.com/kl0tl/purescript-nullable.git"
+            , version =
+                "help-rollup-resolve-foreign-imports"
+            }
       , prelude =
             upstream.prelude
           ⫽ { repo =
